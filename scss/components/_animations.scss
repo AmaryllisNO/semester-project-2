@@ -1,0 +1,100 @@
+@keyframes tail {
+    0% {
+      width: 0;
+    }
+    
+    30% {
+      width: 100px;
+    }
+    
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes shining {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 30px;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes shooting {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(320px);
+    }
+  }
+
+@keyframes glow {
+    40% {
+      text-shadow: 0 1px 10px #fff;
+    }
+  }
+
+
+
+@keyframes arrowhover {
+    0% {margin-top: 10px;}
+    50% {margin-top: 0px;}
+    100% {margin-top: 10px;}
+  }
+
+@keyframes headinghover {
+    0% { margin-top: $pageSpacing*3;
+        margin-left: $pageSpacing*4;}
+    50% {margin-top: $pageSpacing*2.8;
+        margin-left: $pageSpacing*4.3;}
+    100% { margin-top: $pageSpacing*3;
+        margin-left: $pageSpacing*4;}
+}
+
+@keyframes fadeinfromleft {
+    from {
+        opacity: 0;
+        margin-left: -50px;
+    }
+    to {opacity: 1;}
+}
+
+@keyframes fadeinfromleftdelayed {
+    0% { opacity:0;
+        margin-left: -50px; }
+    40% { opacity:0;
+        margin-left: -50px; }
+    100% { opacity:1; }
+}
+
+@keyframes fadein {
+  0% { opacity:0;
+    margin-left: -50px; }
+100% { opacity:1; }
+}
+
+@keyframes fadeinfrombottom {
+  0% { opacity: 0;
+      margin-top: 40px; }
+100% { opacity: 1; }
+}
+
+@keyframes fadeout {
+  0% { opacity:1;
+     }
+100% { opacity:0; 
+  margin-left: -50px;
+  }
+}
+
+@keyframes buttonclickglow {
+  0% { box-shadow: 0px 0px 10px 6px rgba(253, 11, 64, 0.726); }
+  50% {box-shadow: 0px 0px 40px 20px rgba(253, 11, 64, 0.726);}
+  100% {box-shadow: 0px 0px 40px 20px rgba(253, 11, 64, 0);}
+}
+

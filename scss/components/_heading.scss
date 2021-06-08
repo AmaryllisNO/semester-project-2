@@ -1,0 +1,18 @@
+.heading {
+    font-size: 3em;
+    color: white;
+    margin-top: $pageSpacing*2;
+    margin-bottom: $pageSpacing*2;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+    .heading {
+        margin-top: 5em;
+        font-size: 1.5em;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+  }

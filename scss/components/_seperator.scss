@@ -1,0 +1,16 @@
+.seperator {
+    margin: 0 auto; 
+    max-width: 200px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: $pageSpacing*2.5;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .seperator {
+        font-size: 1.5em;
+        margin-bottom: $pageSpacing*1.5;
+        margin-top: -$pageSpacing;
+    }
+  }

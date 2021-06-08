@@ -1,0 +1,234 @@
+.box {
+    min-height: $cardHeight/2.3;
+    border-radius: 0;
+    overflow: hidden;
+    border: none;
+    margin: 0;
+    background-color: map-get($colours , bgColour ); 
+    color: rgb(209, 209, 209);
+    transition: 0.6s;
+
+    &--fav {
+        max-height: 100px;
+        min-height: 100px;
+    }
+
+    &--fav .card__content:hover {
+        background-color: transparent;
+        transition: 0.2s;
+    }
+}
+
+.card-container {
+    margin-bottom: 4em;
+    transition: 0.6s;
+    opacity: 1;
+    margin-top: 40px;
+    
+    &--fadein {
+        margin-top: 0;
+        opacity: 1;
+        animation: fadeinfrombottom 1s ease-in;
+    }
+}
+
+.card__img {
+    max-height: 250px;
+    object-fit: cover;
+    object-position: top;
+}
+.card__img--dark {
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.card-img-top {
+    &:hover {
+        transition: 0.5s;
+    }
+}
+
+.card__title {
+    color: white;
+    display: inline-block;
+    margin: 0;
+}
+
+.card--error {
+    color: map-get($colours , error );
+    // margin-left: $pageSpacing; 
+    margin-bottom: $pageSpacing;
+    font-family: 'Lato', sans-serif;
+}
+
+.card__content {
+    background-color: rgba(20, 20, 19, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    transition: 0.2s;
+    padding: $pageSpacing/3;
+
+    .card__list {
+        list-style: none;
+        padding: 0;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .card__listitem {
+        display: block;
+    }
+}
+
+.card__price, .card__price-container {
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
+    color: white;
+}
+
+.card--dark {
+    border-color: black;
+}
+
+.card__button {
+    background-color: map-get($colours , primary);
+    border: none;
+    border-radius: 0;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    color: white;
+    top: 0; 
+    right: 0;
+    padding: $pageSpacing/4.5;
+    letter-spacing: 0.1em;
+    display: flex;
+    max-width: 200px;
+    min-width: 200px;
+    justify-content: space-around;
+    transition: 0.2s;
+    
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &:hover {
+       box-shadow: 0px 0px 10px 6px rgba(253, 11, 64, 0.726); 
+        background-color: map-get($colours , primaryLighter);
+        transition: 0.2s;
+    }
+}
+
+.card {
+    &__editbutton {
+    display: inline-block;
+    border: none;
+    max-width: 150px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0;
+    margin: 0;
+    margin-left: 40px;
+    text-decoration: none;
+    background: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    align-items: center;
+    transition: 0.3s;
+
+    &:hover span,
+    &:focus span {
+        margin-right: 10px;
+        transition: 0.4s;
+        background: none;
+    }
+    
+    &:focus {
+        outline: 1px solid;
+        outline-offset: 0;
+        max-width: 150px;
+        transition: 0.3s;
+    }
+    
+    &:active {
+        transform: scale(0.99);
+        transition: 0.3s;
+    }
+    }
+}
+
+.card__description {
+    max-width: 80%;
+    margin-top: 1.3em;
+    color: white;
+    font-weight: 200;
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+.card__detailsbutton {
+    display: inline-block;
+    border: none;
+    max-width: 150px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    text-decoration: none;
+    background: none;
+    color: map-get($colours , primaryLighter);
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    align-items: center;
+    transition: 0.3s;
+
+    &:hover span,
+    &:focus span {
+        margin-right: 10px;
+        transition: 0.4s;
+        background: none;
+        color: map-get($colours , primaryLighter )
+    }
+    
+    &:focus {
+        outline: 0      px solid;
+        outline-offset: 0;
+        max-width: 150px;
+        color: map-get($colours , primaryLighter )
+    }
+    
+    &:active {
+        transform: scale(0.99);
+        color: map-get($colours , primaryLighter )
+    }
+}
+
+
+.card__detailsbutton span {
+    transition: 0.5s;
+    color: map-get($colours , primaryLighter )
+}
+
+
+.card__arrowright {
+    margin-left: 0.7em;
+    max-height: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .section {
+        padding: $pageSpacing/2;
+    }
+  }
+    

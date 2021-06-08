@@ -1,0 +1,141 @@
+.header {
+    background-color: rgba(10, 13, 20, 0.4);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    min-width: 100%;
+    transition: 0.5s;
+
+    &--solid {
+        background-color: rgb(10, 13, 20);
+        z-index: 10;
+        transition: 0.5s
+    }
+}
+
+.navbar {
+    padding: $pageSpacing/2 0 $pageSpacing/2 0;
+
+    &__itemcount {
+        &--active {
+        display: inline-block;
+        background: map-get($colours, primary );
+        border-radius: 50%;
+        min-width: 25px;
+        min-height: 25px;
+        margin-left: 10px;
+        text-align: center;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--mobile {
+            flex-direction: column;
+            min-height: 500px;
+            justify-content: center;
+        }
+    }
+
+    &__listitem {
+        display: inline-block;
+        font-family: 'Lato', sans-serif;
+        color: white;
+        text-transform: uppercase;
+        padding-right: $pageSpacing;
+
+        &--mobile {
+            display: block;
+            margin-bottom: $pageSpacing;
+        }
+    }
+
+    &__link {
+        &--active::after {
+        content: "";
+        display: block;
+        background-color: white;
+        width: 100%;
+        height: 3.5px;
+        position: relative;
+        margin-top: -5.2vh;
+        transition: 1s;
+        animation: fadeinfromleft 0.3s ease-in, glow 0.3s ease-in-out infinite;
+    }}
+
+    &__listimage {
+        max-height: 20px;
+        margin-right: $pageSpacing/3;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+      &__listimage {
+          max-height: 30px;
+      }
+
+      &__listitem {
+          padding: 0;
+        //  max-height: 5px;
+
+      }
+
+      &__link {
+        font-size: 1.4em;
+        text-transform: uppercase;
+
+        &--active::after {
+        content: "";
+        display: flex;
+        background-color: white;
+        max-width: 150px;
+        height: 3.5px;
+        position: absolute;
+        margin-top: 0.4vh;
+        transition: 1s;
+        animation: fadeinfromleft 0.3s ease-in, glow 0.3s ease-in-out infinite;
+    }}
+  }
+
+  .navbar button {
+      text-transform: uppercase;
+  }
+
+  .header {
+      max-width: 100%;
+      min-height: 80px;
+  }
+
+  .nav-mobile {
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+      z-index: 99;
+      background: map-get($colours , bgColour );
+      height: 100vh; 
+      width: 100vw;
+
+      &--open {
+          display: block;
+          animation: fadein 0.5s ease-in;
+      }
+
+      &--closed {
+          animation: fadeout 0.5 ease-in;
+          display: none;
+      }
+  }
+
+  
+}
+

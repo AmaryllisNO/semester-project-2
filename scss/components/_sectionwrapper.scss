@@ -1,0 +1,14 @@
+.sectionwrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+    transition: 0.2s;
+}
+
+@media (max-width: 1200px) {
+    .sectionwrapper {
+        padding: $pageSpacing;
+        transition: 0.2s;
+    }
+}
+
+

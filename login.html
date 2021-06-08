@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar sectionwrapper menu-container">
+
+        </nav>
+    </header>
+
+    <div class="sectionwrapper">
+
+        <h1 class="heading">Admin Login</h1>
+
+        <form class="form">
+            <div class="message-container form__message-container"></div>
+
+            <div class="form__field">
+                <label for="username" class="form__label"></label>
+                <input id="username" class="form__input" placeholder="Username" />
+                <div class="form__messageerror form__messageerror--username">Please enter a valid username or email !
+                </div>
+            </div>
+            <div class="form__field">
+                <label for="password" class="form__label"></label>
+                <input id="password" type="password" class="form__input" placeholder="Password" />
+                <div class="form__messageerror form__messageerror--password">Please enter a valid password !</div>
+            </div>
+            <button class="btn form__button" tabindex="0" type="submit">Log In</button>
+        </form>
+
+    </div>
+    <footer class="footer">
+        <div class="footer__content">
+            <ul class="footer__list">
+                <li class="footer__listitem">
+                    <a class="footer__sociallink" href="#">
+                        <img class="footer__socialicon" src="./assets/icons/twitter.svg" alt="twitter" />
+                        <span>Twitter</span>
+                    </a>
+                </li>
+                <li class="footer__listitem">
+                    <a class="footer__sociallink" href="#">
+                        <img class="footer__socialicon" src="./assets/icons/facebook.svg" alt="facebook" />
+                        <span>facebook</span>
+                    </a>
+                </li>
+                <li class="footer__listitem">
+                    <a class="footer__sociallink" href="#">
+                        <img class="footer__socialicon" src="./assets/icons/twitch.svg" alt="twitch" />
+                        <span>twitch</span>
+                    </a>
+                </li>
+                <li class="footer__listitem">
+                    <a class="footer__sociallink" href="#">
+                        <img class="footer__socialicon" src="./assets/icons/instagram.svg" alt="instagram" />
+                        <span>instagram</span>
+                    </a>
+                </li>
+                <li class="footer__listitem">
+                    <a class="footer__sociallink" href="#">
+                        <img class="footer__socialicon" src="./assets/icons/patreon.svg" alt="patreon" />
+                        <span>patreon</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="footer__copyright-container">
+                <small class="footer__copyright">Copyright © 2020 Amaryllis. </small>
+                <small class="footer__copyright">Icons made by Pixel perfect, freepik and mavadee from
+                    www.flaticon.com</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/login.js" type="module"></script>
+</body>
+
+</html>

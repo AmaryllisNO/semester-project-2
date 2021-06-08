@@ -1,0 +1,184 @@
+.details {
+  /*   background-image: url(../../assets/images/eastern-fantasy.jpg);
+    background-size: cover;
+    background-blend-mode: normal;
+    height: 100vh; */
+    //overflow: hidden;
+
+    &__bgcontainer {
+       // overflow: hidden;
+        min-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    max-height: 100vh;
+    }
+
+    &__background {
+        object-fit: cover;
+    background-blend-mode: normal;
+ height: 100%;
+ width: 100%;
+    position: absolute;
+    z-index: 0;
+    filter: blur(20px);
+    object-position: top;
+    
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        height: 100vh;
+        width: 100%;
+        background-color: map-get($colours , bgColourOnImage );
+    }
+
+    &__container {
+        padding-top: $pageSpacing*4;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-around;
+
+        &--secondary {
+            max-width: 1150px;
+            margin: 0 auto;
+            position: relative;
+        
+            z-index: 3;
+            // margin-top: $pageSpacing*4;
+        }
+    }
+
+    &__leftsection,
+    &__righsection {
+        width: 50;
+        padding: $pageSpacing/2;
+        padding-left: 0;
+    }
+
+    &__righsection {
+        margin-left: -20px;
+    }
+
+    &__image {
+        padding-top: 22px;
+        min-height: 300px;
+        max-height: 300px;
+        min-width: 500px;
+        object-fit: cover;
+    object-position: top;
+    }
+
+    &__heading {
+        font-size: 2.5em;
+        font-family: 'Manuale', sans-serif;
+        text-transform: uppercase;
+        margin-bottom: $pageSpacing/3;
+    }
+
+    &__description {
+        max-width: 80%;
+        font-weight: 100;
+    }
+
+    &__price {
+        display: inline;
+        font-family: 'Lato', sans-serif;
+        font-size: 1.9em;
+       
+
+        &-container {
+            display: block;
+            margin-bottom: $pageSpacing/2;
+            font-size: 1.5em;
+        }
+    }
+
+    &__buttons {
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+    }
+
+    &__addbutton {
+        background-color: map-get($colours , primary);
+        border: 0;
+        outline: none;
+        border-radius: 0;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        color: white;
+        padding: $pageSpacing/4.5;
+        letter-spacing: 0.1em;
+        display: flex;
+        min-width: 180px;
+        justify-content: space-between;
+        transition: 0.5s;
+        
+    
+        &:focus {
+            box-shadow: none;
+            border: 0;
+        outline: none;
+        }
+    
+        &:hover {
+           box-shadow: 0px 0px 10px 6px rgba(253, 11, 64, 0.726); 
+            background-color: map-get($colours , primaryLighter);
+            transition: 0.2s;
+        }
+    }
+
+    &__addbutton, 
+    &__cartbutton {
+        margin-right: $pageSpacing;
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .details {
+
+        min-height: 900px;
+
+        &::before {
+            min-height: 900px;
+        }
+
+        &__leftsection {
+            order: 2;
+        }
+
+        &__rightsection {
+            order: 1;
+        }
+
+        &__container {
+            flex-wrap: wrap;
+            position: relative;
+            padding-top: $pageSpacing*2;
+
+
+            &--secondary {
+                position: relative;
+            }
+        }
+
+        &__buttons {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: $pageSpacing;
+        }
+
+        &__cartbutton {
+            margin-top: $pageSpacing;
+            margin-bottom: $pageSpacing;
+            display: block;
+        }
+    }
+ }

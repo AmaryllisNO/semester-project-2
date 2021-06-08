@@ -1,0 +1,64 @@
+
+.button {
+
+    
+    display: inline-block;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: $pageSpacing*2;
+    margin-bottom: $pageSpacing*2;
+    text-decoration: none;
+    background: none;
+    color: map-get($colours , primaryLighter);
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+
+    &:hover span,
+    &:focus span {
+        margin-right: 20px;
+        transition: 0.4s;
+        background: none;
+        color: white;
+    }
+    
+    &:focus {
+        outline: 1px solid white;
+        outline-offset: 4px;
+        max-width: 300px;
+        color: white;
+    }
+    
+    &:active {
+        transform: scale(0.99);
+        color: white;
+    }
+
+    &__arrowright {
+        margin-left: 0.7em;
+        max-height: 20px;
+
+        &--cartmobile {
+            display: none;
+        }
+    }
+
+    &--nomargin {
+        margin: 0;
+    }
+}
+
+
+.button span {
+    transition: 0.5s;
+    color: white;
+}
+
+
